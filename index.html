@@ -122,11 +122,19 @@ textarea{height:104px;resize:none;line-height:1.6}
 .dots i{width:6px;height:6px;border-radius:9px;background:rgba(255,255,255,.6);box-shadow:0 0 0 1px rgba(0,0,0,.12);transition:width .4s var(--ease),background .4s}
 .dots i.on{width:20px;background:#fff}
 .hint2{width:max-content;max-width:100%;margin:0 auto 14px;padding:4px 14px;border-radius:999px;background:rgba(0,0,0,.38);color:#fff;font-size:12px}
-.row{display:flex;gap:8px}
+.row{display:flex;gap:8px;margin-top:26px}
 .row .btn{padding:13px 6px;font-size:13.5px}
 .btn.dk{background:rgba(18,18,30,.86);color:#fff}
 .btn.gl{background:rgba(255,255,255,.93);color:#22222c}
-.home{display:block;margin:14px auto 4px;padding:8px 18px;border:0;border-radius:999px;background:rgba(0,0,0,.3);color:#fff;font-size:13px;cursor:pointer}
+.home{display:block;margin:20px auto 6px;padding:8px 18px;border:0;border-radius:999px;background:rgba(0,0,0,.3);color:#fff;font-size:13px;cursor:pointer}
+
+.tagbox{margin-top:22px;padding:16px 14px 14px;border-radius:18px;background:rgba(0,0,0,.42);color:#fff;text-align:center;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.tg-t{font-size:13.5px;line-height:1.75}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0 8px}
+.chip{border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.14);color:#fff;border-radius:999px;padding:7px 14px;font-size:13.5px;font-weight:500;cursor:pointer;transition:transform .2s,background .2s}
+.chip:hover{background:rgba(255,255,255,.26)}
+.chip:active{transform:scale(.96)}
+.tg-s{font-size:11.5px;opacity:.8}
 
 /* ---------- transitions ---------- */
 .shuffle{position:fixed;inset:0;z-index:90;background:#0B1030F2;display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .35s}
@@ -138,9 +146,9 @@ textarea{height:104px;resize:none;line-height:1.6}
 @keyframes fan{from{transform:rotate(0)}to{transform:rotate(var(--r))}}
 .origami{position:fixed;inset:0;z-index:96;display:grid;place-items:center;background:rgba(8,12,34,.66);opacity:0;pointer-events:none;transition:opacity .4s}
 .origami.on{opacity:1}
-.orw{position:relative;width:190px;height:266px}
+.orw{position:relative;width:230px;height:322px}
 .orw svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 18px 26px rgba(0,0,0,.4))}
-.ocap{position:absolute;left:50%;top:calc(50% + 172px);translate:-50% 0;color:#F1E8D2;font-size:14px;letter-spacing:.04em;white-space:nowrap;transition:opacity .3s}
+.ocap{position:absolute;left:50%;top:calc(50% + 196px);translate:-50% 0;color:#F1E8D2;font-size:14px;letter-spacing:.04em;white-space:nowrap;transition:opacity .3s}
 #fx{position:fixed;inset:0;pointer-events:none;z-index:99}
 .toast{position:fixed;left:50%;bottom:28px;translate:-50% 20px;z-index:120;background:#2B3A36;color:#fff;padding:11px 20px;border-radius:999px;font-size:13.5px;opacity:0;transition:.35s var(--ease);pointer-events:none}
 .toast.on{opacity:1;translate:-50% 0}
@@ -170,7 +178,7 @@ textarea{height:104px;resize:none;line-height:1.6}
     <section class="page on" id="p1">
       <div class="brand">DataBest</div>
       <svg class="mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="32" cy="32" r="29"/><path d="M32 8v10M32 46v10M8 32h10M46 32h10"/><circle cx="32" cy="32" r="9"/><path d="M32 23c3 5 3 13 0 18-3-5-3-13 0-18z"/></svg>
-      <h1>เล่าให้ฟังหน่อย<br>คำทำนายเป็นอย่างไร</h1>
+      <h1>เล่าให้ฟังหน่อยว่า<br>คำทำนายเป็นอย่างไร</h1>
       <p class="lead">คุณช่วยให้คนที่กำลังลังเลตัดสินใจได้ง่ายขึ้น</p>
       <button class="btn" id="goReview">จารึกอักขระชะตา</button>
     </section>
@@ -212,6 +220,13 @@ textarea{height:104px;resize:none;line-height:1.6}
         <button class="btn dk" id="save" type="button">บันทึกการ์ด</button>
         <button class="btn gl" id="share" type="button">แชร์ให้เพื่อน</button>
       </div>
+      <div class="tagbox">
+        <div class="tg-t">โพสการ์ดใบนี้ลงโซเชียล แล้วติดแฮชแท็กด้านล่าง<br>เพื่อรีวิวให้เพื่อนๆ เห็น และเปิดไพ่ไปด้วยกัน</div>
+        <div class="chips">
+          <button class="chip" type="button" data-tag="#เปิดไพ่กับDataBest">#เปิดไพ่กับDataBest</button>
+        </div>
+        <div class="tg-s">แตะแฮชแท็กเพื่อคัดลอก แล้วนำไปวางในโพสต์ได้เลย</div>
+      </div>
       <button class="home" id="home" type="button">กลับหน้าแรก</button>
     </section>
 
@@ -221,7 +236,7 @@ textarea{height:104px;resize:none;line-height:1.6}
 <div class="shuffle" id="shuffle" aria-hidden="true"><div class="deck" id="deck"></div></div>
 
 <div class="origami" id="origami" aria-hidden="true">
-  <div class="orw" id="orw"><svg viewBox="0 0 200 280"><g id="og" stroke="#B3C4BC" stroke-width="1" stroke-linejoin="round">
+  <div class="orw" id="orw"><svg viewBox="0 0 200 280"><defs><pattern id="sheetTex" patternUnits="userSpaceOnUse" x="30" y="10" width="140" height="260"><image id="sheetImg" x="0" y="0" width="140" height="260" preserveAspectRatio="none"/></pattern><pattern id="sheetTexL" patternUnits="userSpaceOnUse" x="30" y="10" width="140" height="260"><image id="sheetImgL" x="0" y="0" width="140" height="260" preserveAspectRatio="none"/></pattern></defs><g id="og" stroke="#B3C4BC" stroke-width="1" stroke-linejoin="round">
     <polygon id="o_base"/><g id="olines" stroke="#CCD8D3" stroke-width="3" stroke-linecap="round"></g>
     <polygon id="o_f1l"/><polygon id="o_f1r"/><polygon id="o_R"/><polygon id="o_f2r"/><polygon id="o_L"/><polygon id="o_f2l"/>
   </g></svg></div>
@@ -337,7 +352,53 @@ var DECK=[
  q:'Your heart is ready to overflow.',t:'ความรักและความสุขกำลังไหลเข้ามา เปิดใจรับไว้ให้เต็มที่นะ',
  art:function(C){var s=S(C),o='';[-52,-26,0,26,52].forEach(function(r){o+='<ellipse cx="100" cy="44" rx="9" ry="22" fill="'+C.a+'" '+S(C,1.6)+' transform="rotate('+r+' 100 66)"/>'});
   return o+'<path d="M70 68C60 86 66 106 54 132M130 68C140 86 134 106 146 132" fill="none" stroke="'+C.a+'" stroke-width="3.6" stroke-linecap="round"/><circle cx="54" cy="142" r="4.5" fill="'+C.a+'"/><circle cx="146" cy="142" r="4.5" fill="'+C.a+'"/><circle cx="45" cy="118" r="3" fill="'+C.a+'"/><circle cx="155" cy="118" r="3" fill="'+C.a+'"/>'+
-  '<path d="M62 68H138C138 106 120 124 100 124C80 124 62 106 62 68Z" fill="'+C.b+'" '+s+'/><path d="M100 110C86 100 86 86 94 84C98 83 100 86 100 88C100 86 102 83 106 84C114 86 114 100 100 110Z" fill="'+C.a+'"/><path d="M100 124V148" fill="none" '+s+'/><path d="M74 158Q100 142 126 158Z" fill="'+C.b+'" '+s+'/>'}}
+  '<path d="M62 68H138C138 106 120 124 100 124C80 124 62 106 62 68Z" fill="'+C.b+'" '+s+'/><path d="M100 110C86 100 86 86 94 84C98 83 100 86 100 88C100 86 102 83 106 84C114 86 114 100 100 110Z" fill="'+C.a+'"/><path d="M100 124V148" fill="none" '+s+'/><path d="M74 158Q100 142 126 158Z" fill="'+C.b+'" '+s+'/>'}},
+{no:'0',en:'The Fool',th:'ผู้เริ่มต้นเดินทาง',c:['#FFF1A8','#6FB7F2'],p:'#FFFDF0',i:'#2A3552',m:'#6C7694',a:'#4C8DDB',b:'#F7C948',ov:'dots',
+ q:'A brand-new road opens under your feet.',t:'ก้าวแรกของคุณกำลังพาไปเจอสิ่งดีๆ ไม่ต้องรอให้พร้อมทุกอย่างก็เริ่มได้',
+ art:function(C){var s=S(C);return '<circle cx="150" cy="36" r="15" fill="'+C.b+'" '+s+'/><path d="M0 150L48 100L84 136L128 88L200 150V180H0Z" fill="'+C.a+'" opacity=".35"/><path d="M30 146H170V180H30Z" fill="'+C.a+'" opacity=".55"/><circle cx="96" cy="58" r="10" fill="'+C.b+'" '+s+'/><path d="M96 70L82 116H110Z" fill="'+C.a+'" '+s+'/><path d="M90 116L84 144M104 116L112 142M104 80L132 56" fill="none" '+s+'/><circle cx="136" cy="53" r="8" fill="'+C.b+'" '+s+'/><g class="tw">'+sp4(40,50,6,C.a)+sp4(62,22,5,C.b)+sp4(176,92,5,C.a)+'</g>'}},
+{no:'VI',en:'The Lovers',th:'คู่รักแห่งหัวใจ',c:['#FFC7D9','#E8457A'],p:'#FFF4F8',i:'#5A1230',m:'#9A5970',a:'#E8457A',b:'#F9D77E',ov:'stars',
+ q:'Choose what makes your heart feel at home.',t:'คนที่ใช่และทางที่ใช่กำลังชัดขึ้น ฟังเสียงหัวใจแล้วเลือกได้เลย',
+ art:function(C){var s=S(C),r='';for(var i=0;i<8;i++){var a=i*Math.PI/4;r+='<line x1="'+(100+Math.cos(a)*21).toFixed(1)+'" y1="'+(34+Math.sin(a)*21).toFixed(1)+'" x2="'+(100+Math.cos(a)*30).toFixed(1)+'" y2="'+(34+Math.sin(a)*30).toFixed(1)+'"/>'}
+ return '<g '+s+'>'+r+'</g><circle cx="100" cy="34" r="15" fill="'+C.b+'" '+s+'/><circle cx="56" cy="86" r="10" fill="'+C.b+'" '+s+'/><path d="M56 98L40 148H72Z" fill="'+C.a+'" '+s+'/><circle cx="144" cy="86" r="10" fill="'+C.b+'" '+s+'/><path d="M144 98L128 148H160Z" fill="'+C.a+'" '+s+'/><path d="M66 112L88 122M134 112L112 122" fill="none" '+s+'/><path d="M100 146C80 132 80 110 92 108C97 107 100 111 100 114C100 111 103 107 108 108C120 110 120 132 100 146Z" fill="'+C.a+'" '+s+'/>'}},
+{no:'VII',en:'The Chariot',th:'รถศึกแห่งชัยชนะ',c:['#FFE9A0','#3E7DD8'],p:'#F1F6FF',i:'#13284F',m:'#5A6F96',a:'#2F6FD0',b:'#F4C542',ov:'diag',
+ q:'Hold the reins; you are going far.',t:'คุณคุมทิศทางได้ ตั้งใจไว้ ชัยชนะอยู่ไม่ไกลแล้ว',
+ art:function(C){var s=S(C);return '<path d="M100 42V14" fill="none" '+s+'/><path d="M100 14L122 22L100 30Z" fill="'+C.a+'" '+s+'/><path d="M50 74Q100 12 150 74Z" fill="'+C.a+'" '+s+'/><g class="tw">'+sp4(76,60,5,C.b)+sp4(100,48,6,C.b)+sp4(124,60,5,C.b)+'</g><rect x="58" y="74" width="84" height="48" rx="5" fill="'+C.b+'" '+s+'/><path d="M58 98H142" fill="none" '+s+'/><circle cx="78" cy="134" r="17" fill="'+C.p+'" '+s+'/><circle cx="122" cy="134" r="17" fill="'+C.p+'" '+s+'/><path d="M78 117V151M61 134H95M122 117V151M105 134H139" fill="none" '+s+'/><path d="M16 154H184" fill="none" '+s+'/>'}},
+{no:'XIV',en:'Temperance',th:'ความสมดุลแห่งใจ',c:['#D6F0FF','#8E7CE0'],p:'#F6F3FF',i:'#2B1F66',m:'#6F65A0',a:'#6E5BD6',b:'#7FD1E8',ov:'lines',
+ q:'Slow and steady is a kind of magic.',t:'ค่อยๆ ผสมผสานให้ลงตัว จังหวะดีๆ กำลังสมดุลทั้งงานและใจ',
+ art:function(C){var s=S(C);return '<path d="M100 18Q66 6 50 26Q76 26 100 40ZM100 18Q134 6 150 26Q124 26 100 40Z" fill="'+C.a+'" opacity=".45"/><g transform="rotate(24 50 56)"><path d="M32 38H68C68 62 58 70 50 70C42 70 32 62 32 38Z" fill="'+C.b+'" '+s+'/></g><path d="M130 100H166C166 124 156 132 148 132C140 132 130 124 130 100Z" fill="'+C.a+'" '+s+'/><path d="M64 68C84 100 112 66 142 102" fill="none" stroke="'+C.b+'" stroke-width="4.5" stroke-linecap="round"/><path d="M64 68C84 100 112 66 142 102" fill="none" stroke="'+C.i+'" stroke-width="1.2" stroke-linecap="round" opacity=".5"/><g class="tw">'+sp4(160,40,7,C.b)+sp4(30,110,6,C.a)+sp4(110,140,5,C.b)+'</g><path d="M20 160q20-10 40 0t40 0t40 0t40 0" fill="none" stroke="'+C.a+'" stroke-width="2.4" stroke-linecap="round"/><path d="M20 172q20-10 40 0t40 0t40 0t40 0" fill="none" stroke="'+C.a+'" stroke-width="2.4" stroke-linecap="round" opacity=".5"/>'}},
+{no:'Ace',en:'Ace of Wands',th:'เอซไม้เท้าแห่งไฟ',c:['#FFD9A8','#F06A3A'],p:'#FFF6EC',i:'#4A1E0C',m:'#9C6A50',a:'#E4572E',b:'#F7B733',ov:'rays',
+ q:'A spark is all a great idea needs.',t:'ไอเดียใหม่และพลังเริ่มต้นกำลังลุกโชน ลงมือเลยตอนนี้ดีที่สุด',
+ art:function(C){var s=S(C),o='';[[78,134],[92,110],[106,86],[120,62]].forEach(function(p,k){var x=p[0]+(k%2?12:-12);o+='<ellipse cx="'+x+'" cy="'+p[1]+'" rx="10" ry="4.6" fill="'+C.a+'" '+S(C,1.4)+' transform="rotate('+(k%2?-30:30)+' '+x+' '+p[1]+')"/>'});
+ return '<path d="M60 164L138 34" fill="none" '+S(C,7)+'/>'+o+'<path d="M138 34C122 22 130 8 138 0C148 10 154 22 138 34Z" fill="'+C.b+'" '+s+'/><g class="tw">'+sp4(52,40,7,C.b)+sp4(172,70,8,C.a)+sp4(36,100,5,C.a)+sp4(168,140,6,C.b)+'</g><path d="M20 172H180" fill="none" '+s+'/>'}},
+{no:'Ace',en:'Ace of Pentacles',th:'เอซเหรียญแห่งโอกาส',c:['#E8F5B8','#4C9A53'],p:'#F8FCEB',i:'#1E3B20',m:'#5F7C5F',a:'#3E8E41',b:'#F2C14E',ov:'dots',
+ q:'Good fortune is planting a seed for you.',t:'โอกาสเรื่องเงินและงานกำลังงอกเงย ดูแลมันดีๆ แล้วจะเติบโต',
+ art:function(C){var s=S(C),d='M';[0,2,4,1,3].forEach(function(k,j){var a=-Math.PI/2+k*2*Math.PI/5;d+=(j?'L':'')+(100+Math.cos(a)*32).toFixed(1)+' '+(84+Math.sin(a)*32).toFixed(1)});
+ return '<circle cx="100" cy="84" r="52" fill="'+C.b+'" '+s+'/><circle cx="100" cy="84" r="42" fill="none" '+S(C,1.4)+'/><path d="'+d+'Z" fill="none" '+S(C,2.4)+'/><path d="M28 172Q64 150 100 160Q136 150 172 172Z" fill="'+C.a+'" opacity=".55"/><g class="tw">'+sp4(30,40,7,C.a)+sp4(172,36,8,C.a)+sp4(176,120,5,C.b)+sp4(24,120,5,C.b)+'</g>'}},
+{no:'III',en:'Three of Cups',th:'สามถ้วยแห่งการเฉลิมฉลอง',c:['#FFE0C7','#F27F8E'],p:'#FFF5F0',i:'#5C1F2E',m:'#9A6270',a:'#E0566E',b:'#F7C873',ov:'stars',
+ q:'Good company makes every day a celebration.',t:'เร็วๆ นี้จะมีเรื่องให้ฉลองกับคนที่รัก รอยยิ้มกำลังมาเยือน',
+ art:function(C){var s=S(C),cup=function(x,y,r){return '<g transform="rotate('+r+' '+x+' '+(y+10)+')"><path d="M'+(x-16)+' '+(y-10)+'H'+(x+16)+'C'+(x+16)+' '+(y+12)+' '+(x+8)+' '+(y+20)+' '+x+' '+(y+20)+'C'+(x-8)+' '+(y+20)+' '+(x-16)+' '+(y+12)+' '+(x-16)+' '+(y-10)+'Z" fill="'+C.b+'" '+s+'/><path d="M'+x+' '+(y+20)+'V'+(y+34)+'M'+(x-9)+' '+(y+36)+'H'+(x+9)+'" fill="none" '+s+'/></g>'},o='';
+ for(var i=0;i<9;i++){var t=i/8,x=26+t*148,y=128+Math.sin(t*Math.PI)*22;o+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="7" fill="'+(i%2?C.b:C.a)+'" '+S(C,1.4)+'/>'}
+ return cup(58,62,-14)+cup(100,42,0)+cup(142,62,14)+o+'<g class="tw">'+sp4(100,12,6,C.a)+sp4(30,40,5,C.b)+sp4(172,40,5,C.b)+'</g>'}},
+{no:'VI',en:'Six of Wands',th:'ไม้เท้าหกแห่งชัยชนะ',c:['#D7F2C2','#E3A21A'],p:'#FBFFF1',i:'#2A3B12',m:'#6A7A50',a:'#6FA83A',b:'#F2B72C',ov:'rays',
+ q:'You earned every bit of this applause.',t:'ความพยายามของคุณถูกมองเห็น ข่าวดีเรื่องความสำเร็จกำลังมา',
+ art:function(C){var s=S(C),o='';for(var i=0;i<18;i++){var t=i*2*Math.PI/18,x=100+46*Math.cos(t),y=84+58*Math.sin(t);o+='<ellipse cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" rx="9" ry="4" fill="'+C.a+'" '+S(C,1.3)+' transform="rotate('+(t*180/Math.PI+90).toFixed(1)+' '+x.toFixed(1)+' '+y.toFixed(1)+')"/>'}
+ return o+'<path d="M100 16V152" fill="none" '+S(C,5)+'/>'+sp4(100,84,24,C.b)+'<path d="M82 142L100 128L118 142L110 168L100 156L90 168Z" fill="'+C.a+'" '+s+'/><g class="tw">'+sp4(34,40,6,C.b)+sp4(168,44,6,C.b)+sp4(30,128,5,C.a)+sp4(172,126,5,C.a)+'</g>'}},
+{no:'X',en:'Ten of Pentacles',th:'สิบเหรียญแห่งความมั่งคั่ง',c:['#FFE6B0','#C98A2C'],p:'#FFF9EA',i:'#40280A',m:'#8A6A3C',a:'#B8741B',b:'#F5C84C',ov:'lines',
+ q:'Abundance is building a home around you.',t:'ความมั่นคงและความอุ่นใจกำลังเต็มขึ้น ทั้งเรื่องเงินและครอบครัว',
+ art:function(C){var s=S(C),o='';[[64,36],[100,36],[136,36],[44,82],[82,82],[118,82],[156,82],[64,128],[100,128],[136,128]].forEach(function(p){o+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="15" fill="'+C.b+'" '+s+'/><circle cx="'+p[0]+'" cy="'+p[1]+'" r="8" fill="none" '+S(C,1.2)+'/>'+sp4(p[0],p[1],5,C.a)});
+ return o+'<path d="M24 166H176" fill="none" '+s+'/><g class="tw">'+sp4(22,30,6,C.a)+sp4(178,30,6,C.a)+'</g>'}},
+{no:'X',en:'Ten of Cups',th:'สิบถ้วยแห่งความสุข',c:['#CFEFFF','#59B6E8'],p:'#F2FAFF',i:'#103A59',m:'#5880A0',a:'#2F95D0',b:'#F5A3B8',ov:'rings',
+ q:'Joy shared is joy doubled.',t:'ความสุขที่สมบูรณ์กำลังรอคุณอยู่ ทั้งครอบครัวและคนรักอบอุ่นใจ',
+ art:function(C){var s=S(C),o='';for(var i=0;i<10;i++){var a=Math.PI+i*Math.PI/9,x=100+86*Math.cos(a),y=132+86*Math.sin(a);o+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="5" fill="'+C.b+'" '+S(C,1.3)+'/>'}
+ return o+'<path d="M32 132A68 68 0 0 1 168 132" fill="none" stroke="'+C.a+'" stroke-width="7" stroke-linecap="round"/><path d="M44 132A56 56 0 0 1 156 132" fill="none" stroke="#F7C873" stroke-width="7" stroke-linecap="round"/><path d="M56 132A44 44 0 0 1 144 132" fill="none" stroke="'+C.b+'" stroke-width="7" stroke-linecap="round"/><rect x="82" y="134" width="36" height="26" fill="'+C.p+'" '+s+'/><path d="M76 134L100 112L124 134Z" fill="'+C.a+'" '+s+'/><path d="M96 160V146H104V160" fill="none" '+s+'/><g class="tw">'+sp4(100,24,7,C.b)+sp4(28,60,5,C.a)+sp4(172,60,5,C.a)+'</g><path d="M16 162H184" fill="none" '+s+'/>'}},
+{no:'Ace',en:'Ace of Swords',th:'เอซดาบแห่งความกระจ่าง',c:['#E3E8FF','#7C8CF0'],p:'#F6F7FF',i:'#1B2152',m:'#6870A8',a:'#5062E0',b:'#F2C14E',ov:'stars',
+ q:'Clarity arrives like morning light.',t:'ความคิดชัดเจนขึ้น คำตอบที่รอคอยกำลังปรากฏ ตัดสินใจได้อย่างมั่นใจ',
+ art:function(C){var s=S(C),o='';for(var k=0;k<7;k++){var y=52+k*12;[-1,1].forEach(function(d){var x=100+d*(24+Math.sin(k/6*Math.PI)*6);o+='<ellipse cx="'+x.toFixed(1)+'" cy="'+y+'" rx="9" ry="3.8" fill="'+C.a+'" '+S(C,1.2)+' transform="rotate('+(d*-40)+' '+x.toFixed(1)+' '+y+')"/>'})}
+ return '<g class="tw" '+S(C,1.6)+'><path d="M100 36V6M80 44L66 20M120 44L134 20M66 64L40 52M134 64L160 52" fill="none"/></g>'+o+'<path d="M100 42L109 56V122H91V56Z" fill="'+C.p+'" '+s+'/><path d="M100 50V118" fill="none" '+S(C,1)+'/><path d="M80 44L86 28L93 38L100 22L107 38L114 28L120 44Z" fill="'+C.b+'" '+s+'/><rect x="74" y="122" width="52" height="9" rx="3" fill="'+C.a+'" '+s+'/><rect x="94" y="131" width="12" height="26" rx="4" fill="'+C.a+'" '+s+'/><circle cx="100" cy="164" r="7" fill="'+C.b+'" '+s+'/>'}},
+{no:'IV',en:'Four of Wands',th:'สี่ไม้เท้าแห่งการเฉลิมฉลอง',c:['#D9F3E4','#C97AD0'],p:'#FBF4FF',i:'#3B1B4A',m:'#876A96',a:'#B25BC0',b:'#F3C65A',ov:'diag',
+ q:'Home is where good things gather.',t:'เรื่องดีๆ ที่บ้านและในใจกำลังมาเติมเต็ม เตรียมฉลองกันได้เลย',
+ art:function(C){var s=S(C),o='';[44,80,120,156].forEach(function(x){o+='<path d="M'+x+' 150V36" fill="none" '+S(C,5)+'/><circle cx="'+x+'" cy="32" r="5" fill="'+C.b+'" '+s+'/>'});
+ return '<rect x="88" y="116" width="24" height="34" fill="'+C.p+'" '+s+'/><path d="M88 116V106H94V110H98V106H102V110H106V106H112V116" fill="'+C.p+'" '+s+'/>'+o+'<path d="M44 58Q62 94 80 58Q100 94 120 58Q138 94 156 58" fill="none" stroke="'+C.a+'" stroke-width="3.5" stroke-linecap="round"/><circle cx="62" cy="82" r="5.5" fill="'+C.b+'" '+s+'/><circle cx="100" cy="82" r="5.5" fill="'+C.b+'" '+s+'/><circle cx="138" cy="82" r="5.5" fill="'+C.b+'" '+s+'/><path d="M20 152H180" fill="none" '+s+'/><g class="tw">'+sp4(24,60,6,C.a)+sp4(176,60,6,C.a)+sp4(100,16,6,C.b)+'</g>'}}
 ];
 
 var cur3=null,layer=0,lastIdx=-1;
@@ -424,6 +485,26 @@ document.querySelectorAll('input[name=rating]').forEach(function(r){r.addEventLi
 function lerp(a,b,t){return a.map(function(v,i){return v+(b[i]-v)*t})}
 function xf(a,c){return a.map(function(v,i){return i%2===0?100+(v-100)*c:v})}
 function run(dur,fn,done){var s=performance.now();(function f(n){var t=Math.min(1,(n-s)/dur),e=t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;fn(e);if(t<1)requestAnimationFrame(f);else if(done)done()})(s)}
+function buildSheet(name,rating,rev){
+  var k=3,c3=document.createElement('canvas');c3.width=140*k;c3.height=260*k;var g=c3.getContext('2d');g.scale(k,k);
+  var SERIF='"Noto Serif Thai",serif',SANS='"IBM Plex Sans Thai",sans-serif';
+  return Promise.all([document.fonts.load('600 12px "Noto Serif Thai"'),document.fonts.load('300 8px "IBM Plex Sans Thai"'),document.fonts.load('500 8px "IBM Plex Sans Thai"')]).catch(function(){}).then(function(){
+    g.fillStyle='#FBFDFB';g.fillRect(0,0,140,260);
+    g.textAlign='center';g.fillStyle='#2B3A36';g.font='600 12px '+SERIF;g.fillText('ให้คะแนนคำทำนาย',70,30);
+    g.fillStyle='#667873';g.font='300 6.5px '+SANS;g.fillText('ชื่อจะแสดงแค่ 4 ตัวอักษรแรกเท่านั้น',70,42);
+    g.textAlign='left';g.fillStyle='#2B3A36';g.font='500 7px '+SANS;g.fillText('Username',12,62);
+    g.fillStyle='#F1F6F3';rp(g,10,67,120,20,6);g.fill();g.strokeStyle='#CBD8D1';g.lineWidth=.6;g.stroke();
+    g.fillStyle='#2B3A36';g.font='300 8px '+SANS;g.fillText(name.slice(0,18),17,80.5);
+    g.textAlign='center';g.font='500 7px '+SANS;g.fillText('ความแม่นยำที่คุณรู้สึก',70,106);
+    g.font='20px '+SANS;for(var i=0;i<5;i++){g.fillStyle=i<rating?'#E7A93B':'#CBD8D1';g.fillText('★',30+i*20,130)}
+    g.textAlign='left';g.fillStyle='#2B3A36';g.font='500 7px '+SANS;g.fillText('ความรู้สึกหลังดูดวง',12,150);
+    g.fillStyle='#F1F6F3';rp(g,10,155,120,70,6);g.fill();g.stroke();
+    g.fillStyle='#2B3A36';g.font='300 7px '+SANS;var y=167;wrap(g,rev,106).slice(0,5).forEach(function(l){g.fillText(l,16,y);y+=11});
+    g.fillStyle='#4F7A6B';rp(g,10,234,120,18,9);g.fill();g.fillStyle='#fff';g.textAlign='center';g.font='500 8px '+SANS;g.fillText('ส่งมอบสัจจะ',70,246);
+    return c3.toDataURL('image/png');
+  });
+}
+function setSheetImage(url){['sheetImg','sheetImgL'].forEach(function(id){var im=document.getElementById(id);im.setAttribute('href',url);im.setAttributeNS('http://www.w3.org/1999/xlink','xlink:href',url)})}
 function origami(done){
   var O=$('#origami'),w=$('#orw'),cap=$('#ocap'),g=function(id){return $('#o_'+id)},base=g('base'),f1l=g('f1l'),f1r=g('f1r'),f2l=g('f2l'),f2r=g('f2r'),L=g('L'),R=g('R'),grp=$('#og'),ln=$('#olines');
   var B0=[30,10,100,10,170,10,170,80,170,270,30,270,30,80],B1=[30,80,100,10,170,80,170,80,170,270,30,270,30,80],B2=[30,179,100,10,170,179,170,179,170,270,30,270,30,179];
@@ -432,9 +513,9 @@ function origami(done){
   var RR=[100,10,170,179,170,270,100,270],LL=[100,10,30,179,30,270,100,270];
   var SH1='#E1EAE5',SH2='#CCD9D3';
   function set(e,a,fill,op){e.setAttribute('points',a.join(' '));if(fill)e.setAttribute('fill',fill);if(op!==undefined)e.setAttribute('opacity',op)}
-  ln.innerHTML='';for(var y=44;y<=250;y+=22){var l=document.createElementNS(NS,'line');l.setAttribute('x1',50);l.setAttribute('x2',y%44===0?150:130);l.setAttribute('y1',y);l.setAttribute('y2',y);ln.appendChild(l)}
+  ln.innerHTML='';
   ln.setAttribute('opacity',1);grp.setAttribute('transform','translate(0,0)');
-  set(base,B0,'#fff',1);set(f1l,F1L0,SH1,0);set(f1r,F1R0,SH1,0);set(f2l,F2L0,SH2,0);set(f2r,F2R0,SH2,0);set(L,LL,'#fff',0);set(R,RR,'#fff',0);
+  set(base,B0,'url(#sheetTex)',1);set(f1l,F1L0,SH1,0);set(f1r,F1R0,SH1,0);set(f2l,F2L0,SH2,0);set(f2r,F2R0,SH2,0);set(L,LL,'#fff',0);set(R,RR,'#fff',0);
   cap.style.opacity=1;w.style.transition='none';w.style.opacity=0;w.style.transform='scale(.85)';
   O.classList.add('on');
   requestAnimationFrame(function(){requestAnimationFrame(function(){w.style.transition='opacity .4s,transform .5s var(--ease)';w.style.opacity=1;w.style.transform='scale(1)'})});
@@ -443,8 +524,8 @@ function origami(done){
       setTimeout(function(){
         run(650,function(t){set(base,lerp(B1,B2,t));set(f1l,F1L1,SH1,1-t);set(f1r,F1R1,SH1,1-t);set(f2l,lerp(F2L0,F2L1,t),SH2,t);set(f2r,lerp(F2R0,F2R1,t),SH2,t)},function(){
           setTimeout(function(){
-            base.setAttribute('opacity',0);set(R,RR,'#fff',1);set(L,LL,'#fff',1);
-            run(700,function(t){var c=Math.cos(t*Math.PI);set(L,xf(LL,c),c>=0?'#fff':SH1,1);set(f2l,xf(F2L1,c),SH2,c>0.02?1:0);grp.setAttribute('transform','translate('+(-35*t)+',0)')},function(){
+            base.setAttribute('opacity',0);set(R,RR,'url(#sheetTex)',1);set(L,LL,'url(#sheetTexL)',1);$('#sheetTexL').setAttribute('patternTransform','matrix(1 0 0 1 0 0)');
+            run(700,function(t){var c=Math.cos(t*Math.PI);var cc=Math.abs(c)<.001?.001:c;set(L,xf(LL,c),c>=0?'url(#sheetTexL)':SH1,1);$('#sheetTexL').setAttribute('patternTransform','matrix('+cc+' 0 0 1 '+(100-100*cc)+' 0)');set(f2l,xf(F2L1,c),SH2,c>0.02?1:0);grp.setAttribute('transform','translate('+(-35*t)+',0)')},function(){
               w.style.transition='transform .45s cubic-bezier(.3,.7,.3,1)';w.style.transform='rotate(46deg) scale(.85)';
               setTimeout(function(){cap.style.opacity=0;w.style.transition='transform .3s ease-out';w.style.transform='translate(-34px,26px) rotate(38deg) scale(.85)'},560);
               setTimeout(function(){w.style.transition='transform .85s cubic-bezier(.35,0,.9,.55),opacity .3s .55s';w.style.transform='translate(75vw,-95vh) rotate(52deg) scale(.5)';w.style.opacity=0},920);
@@ -471,18 +552,21 @@ $('#form').addEventListener('submit',function(e){
   var req=fetch(FORM_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body});
 
   if(RM){go(3)}else{
-    card.classList.add('sheetout');
-    origami(function(){
-      var sh=$('#shuffle');sh.classList.add('on');$('#origami').classList.remove('on');
-      setTimeout(function(){show(3);card.classList.remove('sheetout')},600);
-      setTimeout(function(){sh.classList.remove('on')},1250);
+    buildSheet(name,+rating,rev).then(function(url){
+      setSheetImage(url);
+      card.classList.add('sheetout');
+      origami(function(){
+        var sh=$('#shuffle');sh.classList.add('on');$('#origami').classList.remove('on');
+        setTimeout(function(){show(3);card.classList.remove('sheetout')},600);
+        setTimeout(function(){sh.classList.remove('on')},1250);
+      });
     });
   }
   req.then(function(){
     reviews.unshift({name:mask(name),rating:+rating,review:rev});
     $('#form').reset();$('#hint').textContent='';
   }).catch(function(){toast('ส่งรีวิวไม่สำเร็จ ตรวจสอบอินเทอร์เน็ตแล้วลองอีกครั้ง')})
-  .then(function(){btn.disabled=false;btn.textContent='ส่งรีวิว'});
+  .then(function(){btn.disabled=false;btn.textContent='ส่งมอบสัจจะ'});
 });
 
 /* ================= save / share the card as an image ================= */
@@ -529,7 +613,7 @@ function makeBlob(){
     g.font='700 44px "Noto Serif Thai",serif';g.fillText('มาดูดวงกับ DataBest',116,1220);
     g.fillStyle=c.b;g.font='400 28px "IBM Plex Sans Thai",sans-serif';g.fillText('แอดไลน์ @972zzhhn',116,1264);
     if(qi){g.fillStyle='#fff';rp(g,846,1136,118,118,14);g.fill();g.drawImage(qi,854,1144,102,102)}
-    return new Promise(function(res){cv2.toBlob(res,'image/png')});
+    return new Promise(function(res){cv2.toBlob(res,'image/jpeg',0.92)});
   });
 }
 function shareText(){return cur3.q+'\n'+cur3.t+'\n\nมาดูดวงกับ DataBest แอดไลน์ @972zzhhn\n'+LINE_URL}
@@ -540,13 +624,17 @@ $('#save').addEventListener('click',function(){
 });
 $('#share').addEventListener('click',function(){
   makeBlob().then(function(b){
-    var f=new File([b],'databest-tarot.jpg',{type:'image/jpg'});
+    var f=new File([b],'databest-tarot.jpg',{type:'image/jpeg'});
     if(navigator.canShare&&navigator.canShare({files:[f]}))return navigator.share({files:[f],text:shareText()});
     if(navigator.share)return navigator.share({text:shareText()});
     if(navigator.clipboard)return navigator.clipboard.writeText(shareText()).then(function(){toast('คัดลอกข้อความและลิงก์แล้ว')});
     toast('LINE ID: @972zzhhn');
   }).catch(function(err){if(err&&err.name!=='AbortError')toast('แชร์ไม่สำเร็จ ลองบันทึกการ์ดแล้วส่งเองนะ')});
 });
+document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click',function(){
+  var t=b.dataset.tag;
+  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).catch(function(){var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(e){}ta.remove()}).then(function(){toast('คัดลอก '+t+' แล้ว นำไปวางในโพสต์ได้เลย')});
+})});
 })();
 </script>
 </body>
